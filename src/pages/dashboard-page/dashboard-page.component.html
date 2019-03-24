@@ -1,9 +1,25 @@
-<h1>Weather for Oslo, Norway<br /></h1>
-<div class="[ card ]" *ngFor="let weather of weatherDetail">
-      Sky Conditions: {{ weather.weather_state_name }}<br />
-      Min Tempreture: {{ weather.min_temp }}<br />
-      Max Tempreture: {{ weather.max_temp }}<br />
-      Actual Tempreture: {{ weather.the_temp }}<br />
-      Date Created: {{ weather.created }}<br />
-      Humidity: {{ weather.humidity }}<br />
+<div class="content-container">
+  <header class="header">
+    <img class="header-logo" src="./../../assets/angular.svg" alt="angular logo">
+    <h1 class="header-text">Welcome to the Dashboard</h1>
+  </header>
+
+  <div class="ip-info">
+    <h1>{{ ipInfo.ip }}</h1>
+    <h1>{{ ipInfo.city }}, {{ ipInfo.country }}</h1>
+  </div>
+
+  <div class="insult">
+    <h1>{{ evilInsult }}</h1>
+  </div>
+
+  <div class="random-joke">
+    <h1>{{ randomJoke }}</h1>
+  </div>
+
+  <div class="xkcd-comic">
+    <img src="{{ xkcdComic.img }}" alt="">
+  </div>
 </div>
+
+

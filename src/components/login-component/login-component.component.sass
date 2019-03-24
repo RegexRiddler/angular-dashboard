@@ -1,2 +1,65 @@
-.errors
-  color: red
+.sign-in-container
+  background-color: #2A5362
+  min-width: 320px
+  border-radius: 10px
+  overflow: hidden
+  box-shadow: 3px 5px 8px hsla(0, 0, 0, 0.4)
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+  padding: 35px
+  font-family: 'Montserrat', sans-serif
+
+.sign-in-header
+  margin: 0
+  margin-bottom: 20px
+  font-weight: bold
+  text-transform: uppercase
+  color: #ffffff
+
+.sign-in-form-errors
+  color: #E66F95
+  font-size: 14px
+  font-weight: 400
+
+.sign-in-form input
+  border: 2px solid #ffffff
+  border-radius: 5px
+  height: 32px
+  width: 80%
+  background-color: #ffffff
+  padding-left: 13px
+  margin-bottom: 15px
+  transition: 0.3s ease-in-out
+
+  &:focus, &:hover
+    border: 2px solid #ECA364
+
+.sign-in-form-password-reset
+  display: block
+  font-size: 10px
+  margin-top: -10px
+  margin-right: 30px
+  text-align: right
+  color: #EAEAEA
+
+.sign-in-button
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 12px
+  padding: 9px 24px
+  border-radius: 25px
+  border: 2px solid #ECA364
+  background-color: #ECA364
+  color: #2A5362
+  margin-top: 25px
+  transition: 0.2s ease
+
+  &:active
+    transform-origin: center
+    transform: scale(0.95)
+
+  &:hover
+    border: 2px solid #EAEAEA

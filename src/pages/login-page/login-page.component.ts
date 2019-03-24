@@ -10,7 +10,6 @@ import { LoginService } from './../../services/login.service';
 })
 
 export class LoginPageComponent implements OnInit {
-  title: string = 'Please login to continue to your dashboard';
   isUsername: boolean = false;
   isPassword: boolean = false;
   userObj;
@@ -25,7 +24,6 @@ export class LoginPageComponent implements OnInit {
 
   testUserDetails(userDetails) {
     if (userDetails.username !== this.userObj.username || userDetails.password !== this.userObj.password) {
-      this.title = 'Wrong username or password, please try again';
     } 
     if (userDetails.username !== this.userObj.username) {
       this.isUsername = true;
