@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { WeatherService } from './../../services/weather-service.service';
 import { EvilInsultService } from './../../services/evil-insult.service';
 import { IpInfoService } from 'src/services/ip-info.service';
 import { RandomJokeService } from 'src/services/random-joke.service';
@@ -12,7 +11,7 @@ import 'rxjs';
   selector: 'app-dashboard-page',
   templateUrl: './dashboard-page.component.html',
   styleUrls: ['./dashboard-page.component.sass'],
-  providers: [WeatherService, EvilInsultService, IpInfoService, RandomJokeService, XkcdService]
+  providers: [EvilInsultService, IpInfoService, RandomJokeService, XkcdService]
 })
 
 export class DashboardPageComponent implements OnInit {
@@ -24,7 +23,6 @@ export class DashboardPageComponent implements OnInit {
 
   constructor(
     protected router: Router,
-    protected weatherService: WeatherService, 
     protected evilInsultService: EvilInsultService, 
     protected ipInfoService: IpInfoService, 
     protected randomJokeService: RandomJokeService,
@@ -34,13 +32,6 @@ export class DashboardPageComponent implements OnInit {
     if (!sessionStorage.getItem('AuthToken')) {
       this.router.navigate(['/']);
     }
-
-    this.weatherService.getWeekForecast()
-    .subscribe(
-      weather => {
-        this.weatherDetail = weather.consolidated_weather;
-      }
-    )
 
     this.evilInsultService.getEvilInsult()
     .subscribe(
